@@ -1,0 +1,194 @@
+/* ============================= */
+/* 🌟 DEFAULT — PEARL WHITE */
+/* ============================= */
+
+:root {
+  /* Core palette (spec) */
+  --bg: #FFFFFF;
+  --section: #F8F9FB;
+  --heading: #0F172A;
+  --text: #6B7280;
+  --border: #E5E7EB;
+  --accent: #E63973;
+
+  /* Aliases for existing utilities */
+  --card: #FFFFFF;
+  --bg-soft: var(--section);
+  --text-heading: var(--heading);
+  --text-body: var(--text);
+
+  /* Effects */
+  --accent-glow: rgba(230, 57, 115, 0.15);
+  --accent-glow-strong: rgba(230, 57, 115, 0.4);
+  --dark-mode: 0;
+  --bg-rgb: 255, 255, 255;
+}
+
+/* ============================= */
+/* 🌟 THEME — CHAMPAGNE BEIGE */
+/* ============================= */
+
+.theme-warm {
+
+  /* BG SYSTEM */
+
+  --bg: #FFFBF2;
+  /* soft yellow */
+  --section: #FFF3D9;
+  /* section yellow */
+  --card: #FFFFFF;
+
+  /* TEXT */
+
+  --heading: #1F2937;
+  --text: #6B7280;
+
+  /* UI */
+
+  --border: #F1DFC2;
+
+  /* MAIN YELLOW */
+
+  --accent: #F4C430;
+  /* luxury yellow */
+  --accent-glow: rgba(244, 196, 48, 0.25);
+
+}
+
+/* ============================= */
+/* 🌟 THEME — MIDNIGHT LUXE */
+/* ============================= */
+
+.theme-dark {
+  /* Core palette (spec) */
+  --bg: #0B132B;
+  --section: #1C2541;
+  --heading: #FFFFFF;
+  --text: #CBD5E1;
+  --border: #334155;
+  --accent: #E63973;
+
+  /* Aliases for existing utilities */
+  --card: #1E293B;
+  --bg-soft: #111827;
+  --text-heading: var(--heading);
+  --text-body: var(--text);
+
+  /* Effects */
+  --accent-glow: rgba(230, 57, 115, 0.20);
+  --accent-glow-strong: rgba(230, 57, 115, 0.5);
+  --dark-mode: 1;
+  --bg-rgb: 11, 19, 43;
+}
+
+/* ============================= */
+/* 🌟 GLOBAL BODY */
+/* ============================= */
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* ============================= */
+/* 🌟 GLASS CARD (ALL THEMES) */
+/* ============================= */
+
+.glass-card {
+  background: rgba(var(--bg-rgb), 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ============================= */
+/* 🌟 HERO BACKGROUND */
+/* ============================= */
+
+.hero-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.95);
+  transform: scale(1.02);
+}
+
+/* ============================= */
+/* 🌟 HERO OVERLAYS */
+/* ============================= */
+
+/* White Theme */
+
+.hero-overlay {
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0.72),
+      rgba(255, 255, 255, 0.50));
+}
+
+/* Beige Theme */
+
+.theme-warm .hero-overlay {
+  background: linear-gradient(to right,
+      rgba(255, 248, 236, 0.75),
+      rgba(255, 248, 236, 0.55));
+}
+
+/* Dark Theme */
+
+.theme-dark .hero-overlay {
+  background: linear-gradient(to right,
+      rgba(11, 19, 43, 0.85),
+      rgba(28, 37, 65, 0.70));
+}
+
+/* ============================= */
+/* 🌟 TYPOGRAPHY ENHANCE */
+/* ============================= */
+
+.theme-warm h1,
+.theme-warm h2 {
+  font-family: "Playfair Display", serif;
+}
+
+/* ============================= */
+/* 🌟 DIVIDER STYLE */
+/* ============================= */
+
+.divider {
+  height: 1px;
+  background: linear-gradient(to right,
+      transparent,
+      var(--border),
+      transparent);
+}
+
+/* ============================= */
+/* 🌟 BUTTON SYSTEM */
+/* ============================= */
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  filter: brightness(0.92);
+}
+
+/* ============================= */
+/* 🌟 NAV ACTIVE */
+/* ============================= */
+
+.nav-active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
