@@ -112,7 +112,7 @@ export default function App() {
       </AnimatePresence>
 
       {/* No overflow-hidden on wrapper — let window handle scroll for Lenis */}
-      <div className="relative bg-theme-bg min-h-screen transition-colors duration-500">
+      <div className="relative bg-theme-bg min-h-screen transition-colors duration-500 pt-20 md:pt-24">
         {/* Global UI overlays */}
         <CursorGlow />
         <ScrollProgress />

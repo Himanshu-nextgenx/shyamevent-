@@ -121,27 +121,22 @@ export default function Navbar() {
 
           {/* Mobile / Tablet Toggle (three dots) */}
           <button
-            className="lg:hidden w-11 h-11 flex items-center justify-center rounded-full border border-theme-border bg-theme-bg-soft/80 backdrop-blur-md shadow-sm transition-all duration-300"
+            className="lg:hidden w-11 h-11 flex items-center justify-center rounded-full border border-theme-border bg-theme-bg-soft/90 backdrop-blur-md shadow-md transition-all duration-300 active:scale-95"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
-            <div className="flex flex-col items-center justify-center gap-[3px]">
-              <span
-                className={`w-[4px] h-[4px] rounded-full transition-colors duration-300 ${
-                  mobileOpen ? 'bg-theme-accent' : 'bg-theme-heading'
-                }`}
-              />
-              <span
-                className={`w-[4px] h-[4px] rounded-full transition-colors duration-300 ${
-                  mobileOpen ? 'bg-theme-accent' : 'bg-theme-heading/80'
-                }`}
-              />
-              <span
-                className={`w-[4px] h-[4px] rounded-full transition-colors duration-300 ${
-                  mobileOpen ? 'bg-theme-accent' : 'bg-theme-heading/60'
-                }`}
-              />
-            </div>
+            <svg
+              className={`w-5 h-5 transition-colors duration-300 ${
+                mobileOpen ? 'text-theme-accent' : 'text-theme-heading'
+              }`}
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="12" cy="5" r="1.6" />
+              <circle cx="12" cy="12" r="1.6" />
+              <circle cx="12" cy="19" r="1.6" />
+            </svg>
           </button>
         </div>
       </motion.nav>
